@@ -5,42 +5,44 @@ import styles from './DemoHeader.module.css'
 
 export default function DemoHeader() {
   const location = useLocation()
+  const prefix = location.pathname.startsWith('/demo') ? '/demo' : ''
 
   function isActive(path: string) {
-    if (path === '/' && location.pathname === '/') return true
-    if (path !== '/' && location.pathname.startsWith(path)) return true
+    const target = prefix ? `${prefix}${path === '/' ? '' : path}` : path
+    if (path === '/' && (location.pathname === '/' || location.pathname === '/demo' || location.pathname === '/demo/')) return true
+    if (path !== '/' && location.pathname.startsWith(target)) return true
     return false
   }
 
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <Link to="/" className={styles.brand}>
+        <Link to={prefix ? `${prefix}` : '/'} className={styles.brand}>
           <span className={styles.logoIcon}>🧺</span>
           <span className={styles.brandName}>Noble Fermier — Mode Démo</span>
         </Link>
 
         <nav className={styles.nav} aria-label="Navigation démo">
           <Link
-            to="/"
-            className={`${styles.navLink} ${isActive('/') && location.pathname === '/' ? styles.active : ''}`}
+            to={prefix ? `${prefix}` : '/'}
+            className={`${styles.navLink} ${isActive('/') ? styles.active : ''}`}
           >
             Accueil
           </Link>
           <Link
-            to="/catalogue"
-            className={`${styles.navLink} ${isActive('/catalogue') || isActive('/produit') ? styles.active : ''}`}
+            to={`${prefix}/catalogue`}
+            className={`${styles.navLink} ${isActive('/catalogue') || location.pathname.includes('/produit') ? styles.active : ''}`}
           >
             Catalogue & Rayons
           </Link>
           <Link
-            to="/commandes"
+            to={`${prefix}/commandes`}
             className={`${styles.navLink} ${isActive('/commandes') ? styles.active : ''}`}
           >
             Suivi Commandes
           </Link>
           <Link
-            to="/contact"
+            to={`${prefix}/contact`}
             className={`${styles.navLink} ${isActive('/contact') ? styles.active : ''}`}
           >
             Horaires & Contact
@@ -48,7 +50,7 @@ export default function DemoHeader() {
         </nav>
 
         <div className={styles.actions}>
-          <Link to="/admin-preview" className={styles.adminBtn}>
+          <Link to={`${prefix}/admin-preview`} className={styles.adminBtn}>
             <span>⚙️</span> Aperçu Admin
           </Link>
         </div>

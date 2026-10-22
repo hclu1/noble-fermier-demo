@@ -1,13 +1,15 @@
 // Path: src/demo/pages/DemoHomePage.tsx
 
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { fetchDemoProducts, fetchDemoCategories } from '../lib/demoQueries'
 import type { Product, Category } from '../../types'
 import DemoProductCard from '../components/DemoProductCard'
 import styles from './DemoHomePage.module.css'
 
 export default function DemoHomePage() {
+  const location = useLocation()
+  const prefix = location.pathname.startsWith('/demo') ? '/demo' : ''
   const [featuredProducts, setFeaturedProducts] = useState<Product[]>([])
   const [categories, setCategories] = useState<Category[]>([])
   const [loading, setLoading] = useState(true)
@@ -42,10 +44,10 @@ export default function DemoHomePage() {
             Présentation interactive de l'application primeur pour votre vitrine.
           </p>
           <div className={styles.heroActions}>
-            <Link to="/catalogue" className={styles.primaryBtn}>
+            <Link to={`${prefix}/catalogue`} className={styles.primaryBtn}>
               Découvrir le Catalogue ({featuredProducts.length > 0 ? '28' : '...'} produits)
             </Link>
-            <Link to="/commandes" className={styles.secondaryBtn}>
+            <Link to={`${prefix}/commandes`} className={styles.secondaryBtn}>
               Voir une commande test
             </Link>
           </div>
@@ -63,7 +65,7 @@ export default function DemoHomePage() {
           {categories.map((cat) => (
             <Link
               key={cat.id}
-              to={`/catalogue?cat=${cat.id}`}
+              to={`${prefix}/catalogue?cat=${cat.id}`}
               className={styles.categoryCard}
             >
               {cat.imageUrl && (

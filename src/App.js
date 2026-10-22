@@ -33,11 +33,23 @@ import AdminBrandingPage from './features/admin/branding/AdminBrandingPage';
 import AdminPersoPanel from './admin-perso/AdminPersoPanel';
 // Page 404
 import NotFoundPage from './features/NotFoundPage';
+// Mode Démo Isolé (pour Appalacarte & déploiement demo)
+import DemoApp from './demo/DemoApp';
 // ─────────────────────────────────────────────
 // Routeur principal
 // Les routes admin utilisent AdminLayout (sans PageLayout)
 // et sont protégées par AdminRoute
 // ─────────────────────────────────────────────
 export default function App() {
+    // Détection automatique du mode démo :
+    // - Variable d'environnement VITE_DEMO_MODE=true
+    // - Sous-domaine ou URL Vercel contenant 'demo' (ex. noble-fermier-demo.vercel.app)
+    // - Route locale /demo/
+    const isDemo = import.meta.env.VITE_DEMO_MODE === 'true' ||
+        (typeof window !== 'undefined' &&
+            (window.location.hostname.includes('demo') || window.location.pathname.startsWith('/demo')));
+    if (isDemo) {
+        return _jsx(DemoApp, {});
+    }
     return (_jsxs(Routes, { children: [_jsx(Route, { path: "/admin-perso", element: _jsx(AdminPersoPanel, {}) }), hasFeature('admin') && (_jsxs(Route, { path: "/admin", element: _jsx(AdminRoute, { children: _jsx(AdminLayout, {}) }), children: [_jsx(Route, { index: true, element: _jsx(AdminOrdersPage, {}) }), _jsx(Route, { path: "commandes", element: _jsx(AdminOrdersPage, {}) }), _jsx(Route, { path: "produits", element: _jsx(AdminProductsPage, {}) }), _jsx(Route, { path: "promotions", element: _jsx(AdminPromotionsPage, {}) }), _jsx(Route, { path: "contenu", element: _jsx(AdminContentPage, {}) }), _jsx(Route, { path: "reglages", element: _jsx(AdminSettingsPage, {}) }), _jsx(Route, { path: "branding", element: _jsx(AdminBrandingPage, {}) })] })), _jsx(Route, { path: "/*", element: _jsx(PageLayout, { children: _jsxs(Routes, { children: [hasFeature('home') && _jsx(Route, { path: "/", element: _jsx(HomePage, {}) }), hasFeature('catalog') && _jsx(Route, { path: "/catalogue", element: _jsx(CatalogPage, {}) }), hasFeature('product') && _jsx(Route, { path: "/produit/:slug", element: _jsx(ProductPage, {}) }), hasFeature('contact') && _jsx(Route, { path: "/contact", element: _jsx(ContactPage, {}) }), hasFeature('content') && _jsx(Route, { path: "/p/:slug", element: _jsx(ContentPage, {}) }), _jsx(Route, { path: "/panier", element: _jsx(CartPage, {}) }), _jsx(Route, { path: "/commande", element: _jsx(CheckoutPage, {}) }), hasFeature('auth') && (_jsxs(_Fragment, { children: [_jsx(Route, { path: "/connexion", element: _jsx(LoginPage, {}) }), _jsx(Route, { path: "/mot-de-passe-oublie", element: _jsx(ForgotPasswordPage, {}) })] })), hasFeature('account') && (_jsx(Route, { path: "/mon-compte", element: _jsx(ProtectedRoute, { children: _jsx(AccountPage, {}) }) })), hasFeature('orderHistory') && (_jsx(Route, { path: "/mes-commandes", element: _jsx(ProtectedRoute, { children: _jsx(OrdersPage, {}) }) })), _jsx(Route, { path: "/mentions-legales", element: _jsx(ContentPage, {}) }), _jsx(Route, { path: "/confidentialite", element: _jsx(ContentPage, {}) }), _jsx(Route, { path: "*", element: _jsx(NotFoundPage, {}) })] }) }) })] }));
 }

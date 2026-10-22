@@ -1,9 +1,11 @@
 // Path: src/demo/components/DemoFooter.tsx
 
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import styles from './DemoFooter.module.css'
 
 export default function DemoFooter() {
+  const location = useLocation()
+  const prefix = location.pathname.startsWith('/demo') ? '/demo' : ''
   const appalacarteUrl = (import.meta.env.VITE_APPALACARTE_URL as string) || 'https://appalacarte.fr'
 
   return (
@@ -20,10 +22,10 @@ export default function DemoFooter() {
         <div>
           <h4 className={styles.title}>Parcours Démo</h4>
           <ul className={styles.linkList}>
-            <li><Link to="/" className={styles.link}>Accueil Démo</Link></li>
-            <li><Link to="/catalogue" className={styles.link}>Catalogue Produits</Link></li>
-            <li><Link to="/commandes" className={styles.link}>Suivi des Commandes</Link></li>
-            <li><Link to="/admin-preview" className={styles.link}>Aperçu Tableau de Bord</Link></li>
+            <li><Link to={prefix ? `${prefix}` : '/'} className={styles.link}>Accueil Démo</Link></li>
+            <li><Link to={`${prefix}/catalogue`} className={styles.link}>Catalogue Produits</Link></li>
+            <li><Link to={`${prefix}/commandes`} className={styles.link}>Suivi des Commandes</Link></li>
+            <li><Link to={`${prefix}/admin-preview`} className={styles.link}>Aperçu Tableau de Bord</Link></li>
           </ul>
         </div>
 

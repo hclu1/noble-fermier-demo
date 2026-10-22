@@ -1,7 +1,7 @@
 // Path: src/demo/components/DemoProductCard.tsx
 
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import type { Product } from '../../types'
 import { useDemoContext } from '../context/DemoContext'
 import styles from './DemoProductCard.module.css'
@@ -13,6 +13,8 @@ interface DemoProductCardProps {
 
 export default function DemoProductCard({ product, promotionLabel }: DemoProductCardProps) {
   const { triggerDemoNotice } = useDemoContext()
+  const location = useLocation()
+  const prefix = location.pathname.startsWith('/demo') ? '/demo' : ''
 
   function handleAdd(e: React.MouseEvent) {
     e.preventDefault()
@@ -22,7 +24,7 @@ export default function DemoProductCard({ product, promotionLabel }: DemoProduct
 
   return (
     <article className={styles.card}>
-      <Link to={`/produit/${product.slug}`} className={styles.linkWrapper}>
+      <Link to={`${prefix}/produit/${product.slug}`} className={styles.linkWrapper}>
         <div className={styles.imageContainer}>
           {product.imageUrl ? (
             <img

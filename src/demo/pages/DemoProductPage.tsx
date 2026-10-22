@@ -1,7 +1,7 @@
 // Path: src/demo/pages/DemoProductPage.tsx
 
 import { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useLocation } from 'react-router-dom'
 import { fetchDemoProducts, fetchDemoPromotions } from '../lib/demoQueries'
 import type { Product, Promotion } from '../../types'
 import { useDemoContext } from '../context/DemoContext'
@@ -9,6 +9,8 @@ import styles from './DemoProductPage.module.css'
 
 export default function DemoProductPage() {
   const { slug } = useParams<{ slug: string }>()
+  const location = useLocation()
+  const prefix = location.pathname.startsWith('/demo') ? '/demo' : ''
   const { triggerDemoNotice } = useDemoContext()
   const [product, setProduct] = useState<Product | null>(null)
   const [promotions, setPromotions] = useState<Promotion[]>([])
@@ -50,7 +52,7 @@ export default function DemoProductPage() {
         <div style={{ textAlign: 'center', padding: '4rem' }}>
           <h2>Produit non trouvé</h2>
           <p style={{ color: '#6b7280', margin: '1rem 0' }}>Ce produit n’existe pas ou a été retiré des étals.</p>
-          <Link to="/catalogue" className={styles.backLink}>
+          <Link to={`${prefix}/catalogue`} className={styles.backLink}>
             ← Revenir au catalogue
           </Link>
         </div>
@@ -62,7 +64,7 @@ export default function DemoProductPage() {
 
   return (
     <div className={styles.container}>
-      <Link to="/catalogue" className={styles.backLink}>
+      <Link to={`${prefix}/catalogue`} className={styles.backLink}>
         ← Retour aux rayons primeurs
       </Link>
 

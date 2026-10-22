@@ -16,11 +16,17 @@ export default function DemoApp() {
       <DemoLayout>
         <Routes>
           <Route path="/" element={<DemoHomePage />} />
+          <Route path="/demo" element={<DemoHomePage />} />
           <Route path="/catalogue" element={<DemoCatalogPage />} />
+          <Route path="/demo/catalogue" element={<DemoCatalogPage />} />
           <Route path="/produit/:slug" element={<DemoProductPage />} />
+          <Route path="/demo/produit/:slug" element={<DemoProductPage />} />
           <Route path="/commandes" element={<DemoOrdersPage />} />
+          <Route path="/demo/commandes" element={<DemoOrdersPage />} />
           <Route path="/admin-preview" element={<DemoAdminPreviewPage />} />
+          <Route path="/demo/admin-preview" element={<DemoAdminPreviewPage />} />
           <Route path="/contact" element={<DemoContactPage />} />
+          <Route path="/demo/contact" element={<DemoContactPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </DemoLayout>

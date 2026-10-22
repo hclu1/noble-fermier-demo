@@ -3,6 +3,12 @@
 Toutes les modifications notables apportées à ce projet sont documentées dans ce fichier.
 Le format est basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/) et ce projet respecte le [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.2.0] - 2026-10-22
+
+### Ajouté
+- Détection automatique du domaine de démo (`noble-fermier-demo.vercel.app`) : la démo est désormais servie directement à la racine du projet Vercel sans nécessiter de chemin `/demo/`.
+- Prise en charge transparente des deux modes d'accès (à la racine sur le domaine Vercel démo, ou sous `/demo/` en local).
+
 ## [1.1.2] - 2026-10-22
 
 ### Modifié

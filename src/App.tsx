@@ -41,6 +41,9 @@ import AdminPersoPanel from './admin-perso/AdminPersoPanel'
 // Page 404
 import NotFoundPage from './features/NotFoundPage'
 
+// Mode Démo Isolé (pour Appalacarte & déploiement demo)
+import DemoApp from './demo/DemoApp'
+
 
 // ─────────────────────────────────────────────
 // Routeur principal
@@ -48,6 +51,19 @@ import NotFoundPage from './features/NotFoundPage'
 // et sont protégées par AdminRoute
 // ─────────────────────────────────────────────
 export default function App() {
+  // Détection automatique du mode démo :
+  // - Variable d'environnement VITE_DEMO_MODE=true
+  // - Sous-domaine ou URL Vercel contenant 'demo' (ex. noble-fermier-demo.vercel.app)
+  // - Route locale /demo/
+  const isDemo =
+    import.meta.env.VITE_DEMO_MODE === 'true' ||
+    (typeof window !== 'undefined' &&
+      (window.location.hostname.includes('demo') || window.location.pathname.startsWith('/demo')))
+
+  if (isDemo) {
+    return <DemoApp />
+  }
+
   return (
     <Routes>
 
