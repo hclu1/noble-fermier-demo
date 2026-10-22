@@ -3,6 +3,13 @@
 Toutes les modifications notables apportées à ce projet sont documentées dans ce fichier.
 Le format est basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/) et ce projet respecte le [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.3.0] - 2026-10-22
+
+### Ajouté
+- Sélecteur de vue interactif dans la bannière démo : bascule en un clic entre **🖥️ Vue PC** et **📱 Vue Smartphone**.
+- Simulateur réaliste de smartphone (châssis mobile, Dynamic Island, écran tactile à défilement indépendant, barre d'accueil iOS/Android).
+- Adaptation automatique des grilles, cartes et espacements au format mobile à l'intérieur du simulateur.
+
 ## [1.2.0] - 2026-10-22
 
 ### Ajouté

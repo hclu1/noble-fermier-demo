@@ -11,6 +11,7 @@ export function useDemoContext() {
 export function DemoProvider({ children }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [blockedActionName, setBlockedActionName] = useState(null);
+    const [deviceMode, setDeviceMode] = useState('desktop');
     function triggerDemoNotice(actionName) {
         setBlockedActionName(actionName || 'Cette action');
         setIsModalOpen(true);
@@ -24,5 +25,7 @@ export function DemoProvider({ children }) {
             blockedActionName,
             triggerDemoNotice,
             closeDemoNotice,
+            deviceMode,
+            setDeviceMode,
         }, children: children }));
 }

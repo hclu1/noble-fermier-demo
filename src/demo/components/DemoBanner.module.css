@@ -57,6 +57,53 @@
   gap: 0.5rem;
 }
 
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deviceSwitcher {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 0.2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  gap: 0.25rem;
+}
+
+.deviceBtn {
+  background: transparent;
+  color: #9ca3af;
+  border: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.825rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
+}
+
+.deviceBtn:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.activeDevice {
+  background-color: #10b981;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.activeDevice:hover {
+  background-color: #059669;
+  color: #ffffff;
+}
+
 .backBtn {
   display: inline-flex;
   align-items: center;

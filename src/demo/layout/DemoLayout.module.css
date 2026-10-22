@@ -13,3 +13,178 @@
   flex: 1;
   width: 100%;
 }
+
+/* ══════════════════════════════════════════════════════
+   SIMULATEUR DE SMARTPHONE (Mode Vue Mobile)
+   ══════════════════════════════════════════════════════ */
+
+.mobileStage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.5rem 1rem 3rem;
+  background: radial-gradient(circle at 50% 20%, #1e293b 0%, #0f172a 100%);
+  min-height: calc(100vh - 46px);
+}
+
+.stageHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  color: #e2e8f0;
+  font-size: 0.875rem;
+}
+
+.stageBadge {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #6ee7b7;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.phoneCase {
+  width: 410px;
+  max-width: 100%;
+  height: 820px;
+  max-height: calc(100vh - 120px);
+  background-color: #111827;
+  border-radius: 48px;
+  padding: 11px;
+  box-shadow:
+    0 0 0 2px #334155,
+    0 25px 50px -12px rgba(0, 0, 0, 0.7),
+    0 0 40px rgba(16, 185, 129, 0.15);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.islandPill {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 105px;
+  height: 24px;
+  background-color: #000000;
+  border-radius: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+}
+
+.cameraLens {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #1e293b;
+  border: 1.5px solid #0f172a;
+}
+
+.phoneScreen {
+  flex: 1;
+  background-color: var(--color-background, #FDFBF7);
+  border-radius: 38px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  -webkit-overflow-scrolling: touch;
+}
+
+.homeIndicator {
+  width: 120px;
+  height: 4px;
+  background-color: #94a3b8;
+  border-radius: 10px;
+  margin: 8px auto 2px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Adaptations automatiques du contenu à l'intérieur du téléphone */
+.phoneScreen [class*="categoryGrid"] {
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 0.75rem !important;
+}
+
+.phoneScreen [class*="productGrid"] {
+  grid-template-columns: 1fr !important;
+  gap: 1rem !important;
+}
+
+.phoneScreen [class*="layout"] {
+  grid-template-columns: 1fr !important;
+  gap: 1.5rem !important;
+  padding: 1.25rem !important;
+}
+
+.phoneScreen [class*="grid"] {
+  grid-template-columns: 1fr !important;
+  gap: 1.5rem !important;
+}
+
+.phoneScreen [class*="statsGrid"] {
+  grid-template-columns: 1fr 1fr !important;
+  gap: 0.75rem !important;
+}
+
+.phoneScreen [class*="nav"] {
+  display: none !important;
+}
+
+.phoneScreen [class*="heroTitle"] {
+  font-size: 1.75rem !important;
+}
+
+.phoneScreen [class*="heroSubtitle"] {
+  font-size: 0.95rem !important;
+}
+
+.phoneScreen [class*="toolbar"] {
+  padding: 0.75rem !important;
+}
+
+.phoneScreen [class*="categoryPills"] {
+  overflow-x: auto !important;
+  flex-wrap: nowrap !important;
+  padding-bottom: 0.5rem !important;
+}
+
+/* Sur les vrais téléphones mobiles (< 640px), affichage naturel plein écran */
+@media (max-width: 640px) {
+  .mobileStage {
+    padding: 0;
+    background: transparent;
+  }
+  .stageHeader {
+    display: none;
+  }
+  .phoneCase {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+  }
+  .islandPill,
+  .homeIndicator {
+    display: none;
+  }
+  .phoneScreen {
+    border-radius: 0;
+  }
+}
+
