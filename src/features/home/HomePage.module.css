@@ -141,6 +141,20 @@
   line-height: 1;
 }
 
+.categoryImg {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  border: 2px solid #ffffff;
+  transition: transform var(--transition-normal);
+}
+
+.categoryCard:hover .categoryImg {
+  transform: scale(1.08);
+}
+
 .categoryName {
   font-weight: var(--font-semibold);
   color: var(--color-heading);

@@ -90,9 +90,18 @@ export default function HomePage() {
                   className={styles.categoryCard}
                   onClick={() => navigate(`/catalogue?categorie=${cat.slug}`)}
                 >
-                  <span className={styles.categoryEmoji}>
-                    {CATEGORY_EMOJIS[cat.slug] ?? '🌱'}
-                  </span>
+                  {cat.imageUrl ? (
+                    <img
+                      src={cat.imageUrl}
+                      alt={cat.name}
+                      className={styles.categoryImg}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span className={styles.categoryEmoji}>
+                      {CATEGORY_EMOJIS[cat.slug] ?? '🌱'}
+                    </span>
+                  )}
                   <span className={styles.categoryName}>{cat.name}</span>
                 </button>
               ))

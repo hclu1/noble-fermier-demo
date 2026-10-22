@@ -3,6 +3,11 @@
 Toutes les modifications notables apportées à ce projet sont documentées dans ce fichier.
 Le format est basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/) et ce projet respecte le [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.1.1] - 2026-10-22
+
+### Modifié
+- Remplacement des émojis simples par les photographies professionnelles et réalistes pour les rayons primeurs (Fruits du marché provençal, Légumes d'antan de plein champ, Bottes d'aromates maraîchères liées au raphia).
+
 ## [1.1.0] - 2026-10-22
 
 ### Ajouté

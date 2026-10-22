@@ -156,11 +156,11 @@ CREATE POLICY "RLS_Demo_OrderItems_Select"    ON demo_order_items   FOR SELECT T
 
 -- Catégories
 INSERT INTO demo_categories (id, name, slug, image_url, "order") VALUES
-  ('cat-1', 'Fruits de saison', 'fruits-de-saison', 'https://images.unsplash.com/photo-1619566636858-adf3ef46400b?auto=format&fit=crop&w=600&q=80', 1),
-  ('cat-2', 'Légumes de pleine terre', 'legumes-de-pleine-terre', 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80', 2),
-  ('cat-3', 'Agrumes & Vergers du Sud', 'agrumes-vergers-du-sud', 'https://images.unsplash.com/photo-1582979512210-99b6a53386f9?auto=format&fit=crop&w=600&q=80', 3),
-  ('cat-4', 'Herbes aromatiques & Salades', 'herbes-aromatiques-salades', 'https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&w=600&q=80', 4),
-  ('cat-5', 'Paniers Maraîchers composés', 'paniers-maraichers-composes', 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80', 5);
+  ('cat-1', 'Fruits de saison', 'fruits-de-saison', 'https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=1200&q=80', 1),
+  ('cat-2', 'Légumes de pleine terre', 'legumes-de-pleine-terre', 'https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?auto=format&fit=crop&w=1200&q=80', 2),
+  ('cat-3', 'Agrumes & Vergers du Sud', 'agrumes-vergers-du-sud', 'https://images.unsplash.com/photo-1582979512210-99b6a53386f9?auto=format&fit=crop&w=1200&q=80', 3),
+  ('cat-4', 'Herbes aromatiques & Salades', 'herbes-aromatiques-salades', 'https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?auto=format&fit=crop&w=1200&q=80', 4),
+  ('cat-5', 'Paniers Maraîchers composés', 'paniers-maraichers-composes', 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80', 5);
 
 -- Promotions
 INSERT INTO demo_promotions (id, label, discount_percent, product_ids, category_ids) VALUES

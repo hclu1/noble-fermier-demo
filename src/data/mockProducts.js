@@ -3,10 +3,34 @@
 // Données mockées — remplacées par Supabase plus tard
 // ─────────────────────────────────────────────
 export const mockCategories = [
-    { id: 'cat-1', name: 'Fruits', slug: 'fruits', order: 1 },
-    { id: 'cat-2', name: 'Légumes', slug: 'legumes', order: 2 },
-    { id: 'cat-3', name: 'Herbes', slug: 'herbes', order: 3 },
-    { id: 'cat-4', name: 'Paniers', slug: 'paniers', order: 4 },
+    {
+        id: 'cat-1',
+        name: 'Fruits',
+        slug: 'fruits',
+        order: 1,
+        imageUrl: 'https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=1200&q=80',
+    },
+    {
+        id: 'cat-2',
+        name: 'Légumes',
+        slug: 'legumes',
+        order: 2,
+        imageUrl: 'https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?auto=format&fit=crop&w=1200&q=80',
+    },
+    {
+        id: 'cat-3',
+        name: 'Herbes',
+        slug: 'herbes',
+        order: 3,
+        imageUrl: 'https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?auto=format&fit=crop&w=1200&q=80',
+    },
+    {
+        id: 'cat-4',
+        name: 'Paniers',
+        slug: 'paniers',
+        order: 4,
+        imageUrl: 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80',
+    },
 ];
 export const mockProducts = [
     // Fruits
