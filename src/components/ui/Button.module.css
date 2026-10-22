@@ -1,0 +1,94 @@
+/* Path: src/components/ui/Button.module.css */
+
+/* ─── Base ─── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-weight: var(--font-semibold);
+  border-radius: var(--radius-full);
+  border: 2px solid transparent;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+  white-space: nowrap;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ─── Tailles ─── */
+.sm {
+  font-size: var(--text-xs);
+  padding: var(--space-2) var(--space-4);
+}
+
+.md {
+  font-size: var(--text-sm);
+  padding: var(--space-3) var(--space-6);
+}
+
+.lg {
+  font-size: var(--text-base);
+  padding: var(--space-4) var(--space-8);
+}
+
+/* ─── Variantes ─── */
+
+/* Bouton principal — orange fruité */
+.primary {
+  background-color: var(--color-cta);
+  border-color: var(--color-cta);
+  color: white;
+  box-shadow: 0 2px 8px rgba(244, 132, 95, 0.35);
+}
+
+.primary:hover:not(:disabled) {
+  background-color: var(--color-cta-hover);
+  border-color: var(--color-cta-hover);
+  box-shadow: 0 4px 14px rgba(244, 132, 95, 0.45);
+  transform: translateY(-1px);
+}
+
+/* Bouton secondaire — contour vert */
+.secondary {
+  background-color: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.secondary:hover:not(:disabled) {
+  background-color: var(--color-primary);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Bouton fantôme — sans fond */
+.ghost {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-primary);
+}
+
+.ghost:hover:not(:disabled) {
+  background-color: var(--color-surface-alt);
+}
+
+/* ─── Pleine largeur ─── */
+.fullWidth {
+  width: 100%;
+}

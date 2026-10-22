@@ -1,0 +1,95 @@
+/* Path: src/demo/components/DemoBanner.module.css */
+
+.banner {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  color: #f9fafb;
+  padding: 0.6rem 1rem;
+  border-bottom: 2px solid #10b981;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: inherit;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.badge {
+  background-color: #10b981;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+}
+
+.text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #e5e7eb;
+}
+
+.highlight {
+  color: #a7f3d0;
+  font-weight: 600;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.backBtn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .banner {
+    padding: 0.5rem 0.75rem;
+  }
+  .inner {
+    justify-content: center;
+    text-align: center;
+  }
+  .text {
+    font-size: 0.8rem;
+  }
+  .backBtn {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+}

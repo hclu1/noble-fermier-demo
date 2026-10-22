@@ -1,0 +1,15 @@
+/* Path: src/demo/layout/DemoLayout.module.css */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-background, #FDFBF7);
+  color: var(--color-text, #1f2937);
+  font-family: var(--font-body, system-ui, sans-serif);
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+}

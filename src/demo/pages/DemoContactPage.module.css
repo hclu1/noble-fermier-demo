@@ -1,0 +1,145 @@
+/* Path: src/demo/pages/DemoContactPage.module.css */
+
+.page {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-heading, serif);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.25rem;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.infoIcon {
+  font-size: 1.3rem;
+  color: #2D6A4F;
+}
+
+.infoContent h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.2rem;
+}
+
+.infoContent p {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+.hoursTable {
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  border-collapse: collapse;
+}
+
+.hoursTable td {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.input, .textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submitBtn {
+  background-color: #2D6A4F;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.85rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+}
+
+.submitBtn:hover {
+  background-color: #24553f;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

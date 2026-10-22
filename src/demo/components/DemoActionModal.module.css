@@ -1,0 +1,111 @@
+/* Path: src/demo/components/DemoActionModal.module.css */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal {
+  background-color: #ffffff;
+  border-radius: 16px;
+  max-width: 480px;
+  width: 100%;
+  padding: 2rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  border: 1px solid #e5e7eb;
+}
+
+.iconContainer {
+  width: 56px;
+  height: 56px;
+  background-color: #fef3c7;
+  color: #d97706;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin: 0 auto 1.25rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.message {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.actionBadge {
+  display: inline-block;
+  background-color: #f3f4f6;
+  color: #374151;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2D6A4F;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.ctaBtn:hover {
+  background-color: #24553f;
+}
+
+.closeBtn {
+  background-color: transparent;
+  color: #6b7280;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.closeBtn:hover {
+  background-color: #f9fafb;
+  color: #111827;
+}

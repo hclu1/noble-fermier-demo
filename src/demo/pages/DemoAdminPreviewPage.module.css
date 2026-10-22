@@ -1,0 +1,149 @@
+/* Path: src/demo/pages/DemoAdminPreviewPage.module.css */
+
+.page {
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.title {
+  font-family: var(--font-heading, serif);
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.adminBadge {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.statValue {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #2D6A4F;
+}
+
+.tableCard {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.tableHeader {
+  padding: 1.25rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tableTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.createBtn {
+  background-color: #2D6A4F;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: background-color 0.2s;
+}
+
+.createBtn:hover {
+  background-color: #24553f;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.th {
+  background-color: #f9fafb;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: #4b5563;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  color: #1f2937;
+}
+
+.row:hover {
+  background-color: #fafafa;
+}
+
+.actionIconBtn {
+  background: none;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-right: 0.35rem;
+}
+
+.actionIconBtn:hover {
+  background-color: #f3f4f6;
+}

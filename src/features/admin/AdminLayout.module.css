@@ -1,0 +1,263 @@
+/* Path: src/features/admin/AdminLayout.module.css */
+
+/* ─── Coque globale ─── */
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5f4;
+}
+
+/* ─── Barre du haut ─── */
+.topbar {
+  height: 56px;
+  background-color: var(--color-primary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-6);
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+.topbarLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* Bouton hamburger — masqué sur desktop */
+.menuToggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  color: var(--color-text-on-dark);
+  font-size: var(--text-lg);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.menuToggle:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+}
+
+.brandIcon {
+  font-size: 1.4rem;
+}
+
+.brandName {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: var(--font-bold);
+  color: var(--color-text-on-dark);
+}
+
+.topbarRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.userEmail {
+  font-size: var(--text-sm);
+  color: rgba(254, 250, 224, 0.65);
+}
+
+.siteLink {
+  font-size: var(--text-sm);
+  color: var(--color-primary-light);
+  font-weight: var(--font-medium);
+  transition: color var(--transition-fast);
+}
+
+.siteLink:hover {
+  color: var(--color-text-on-dark);
+}
+
+.logoutBtn {
+  font-size: var(--text-sm);
+  color: rgba(254, 250, 224, 0.65);
+  cursor: pointer;
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.logoutBtn:hover {
+  color: var(--color-text-on-dark);
+  background-color: rgba(255, 255, 255, 0.10);
+}
+
+/* ─── Corps (sidebar + main) ─── */
+.body {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+/* ─── Sidebar desktop ─── */
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background-color: white;
+  border-right: 1px solid var(--color-border);
+  padding: var(--space-6) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  position: sticky;
+  top: 56px;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.sidebarLabel {
+  font-size: var(--text-xs);
+  font-weight: var(--font-bold);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0 var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+/* Section Concepteur — séparée visuellement de la section Gestion */
+.sidebarLabelTop {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.navLink:hover {
+  background-color: var(--color-surface-alt);
+  color: var(--color-text);
+}
+
+.navLink.active {
+  background-color: var(--color-surface-alt);
+  color: var(--color-primary-dark);
+  font-weight: var(--font-semibold);
+}
+
+/* Éléments de bas de sidebar — masqués sur desktop */
+.mobileFooter {
+  display: none;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: auto;
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.mobileSiteLink {
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  font-weight: var(--font-medium);
+  padding: var(--space-2) var(--space-3);
+}
+
+.mobileLogout {
+  font-size: var(--text-sm);
+  color: var(--color-accent);
+  font-weight: var(--font-medium);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.mobileLogout:hover {
+  background-color: #fef2f2;
+}
+
+/* ─── Fond semi-transparent (mobile) ─── */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 56px 0 0 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 99;
+}
+
+/* ─── Zone de contenu principale ─── */
+.main {
+  flex: 1;
+  padding: var(--space-8);
+  overflow-x: auto;
+}
+
+/* ─── Responsive mobile ─── */
+@media (max-width: 768px) {
+
+  /* Afficher le bouton hamburger */
+  .menuToggle {
+    display: flex;
+  }
+
+  /* Masquer les éléments de topbar sur mobile (dans le menu sidebar) */
+  .userEmail,
+  .siteLink,
+  .logoutBtn {
+    display: none;
+  }
+
+  /* Sidebar transformée en panneau latéral glissant */
+  .sidebar {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    height: calc(100vh - 56px);
+    width: 260px;
+    transform: translateX(-100%);
+    transition: transform var(--transition-normal);
+    z-index: 100;
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Sidebar ouverte */
+  .sidebar.sidebarOpen {
+    transform: translateX(0);
+  }
+
+  /* Fond visible quand la sidebar est ouverte */
+  .overlay {
+    display: block;
+  }
+
+  /* Éléments de bas de sidebar visibles sur mobile */
+  .mobileFooter {
+    display: flex;
+  }
+
+  .main {
+    padding: var(--space-5);
+  }
+}

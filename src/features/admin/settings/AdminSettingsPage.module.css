@@ -1,0 +1,195 @@
+/* Path: src/features/admin/settings/AdminSettingsPage.module.css */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 860px;
+}
+
+/* ─── En-tête ─── */
+.header {
+  padding-bottom: var(--space-4);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  color: var(--color-heading);
+  margin-bottom: var(--space-2);
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+/* ─── Bannière confirmation ─── */
+.savedBanner {
+  padding: var(--space-3) var(--space-5);
+  background-color: #f0fdf4;
+  border: 1px solid var(--color-primary-light);
+  border-radius: var(--radius-md);
+  color: var(--color-primary);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-sm);
+}
+
+/* ─── Formulaire ─── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* ─── Sections ─── */
+.section {
+  background-color: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  color: var(--color-heading);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ─── Grille de champs ─── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.fieldFull {
+  grid-column: 1 / -1;
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+}
+
+.input {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: white;
+  outline: none;
+  transition: border-color var(--transition-fast);
+  width: 100%;
+}
+
+.input:focus {
+  border-color: var(--color-primary-light);
+  box-shadow: 0 0 0 2px rgba(82, 183, 136, 0.15);
+}
+
+/* ─── Listes dynamiques (horaires, réseaux) ─── */
+.listField {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.listRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.socialRow {
+  display: grid;
+  grid-template-columns: 160px 1fr auto;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.inputUrl {
+  flex: 1;
+}
+
+.removeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.removeBtn:hover {
+  background-color: #fef2f2;
+  color: var(--color-accent);
+}
+
+/* ─── Bouton sauvegarde ─── */
+.errorBanner {
+  padding: var(--space-3) var(--space-4);
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-md);
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+}
+
+.saveRow {
+  padding-top: var(--space-4);
+}
+
+/* ─── Champ couleur ─── */
+.labelHint {
+  font-weight: var(--font-normal);
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+}
+
+.colorRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.colorPicker {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .socialRow {
+    grid-template-columns: 1fr;
+  }
+}

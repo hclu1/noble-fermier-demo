@@ -1,0 +1,181 @@
+// Path: src/data/mockProducts.ts
+
+import type { Category, Product } from '../types'
+
+// ─────────────────────────────────────────────
+// Données mockées — remplacées par Supabase plus tard
+// ─────────────────────────────────────────────
+
+export const mockCategories: Category[] = [
+  { id: 'cat-1', name: 'Fruits', slug: 'fruits', order: 1 },
+  { id: 'cat-2', name: 'Légumes', slug: 'legumes', order: 2 },
+  { id: 'cat-3', name: 'Herbes', slug: 'herbes', order: 3 },
+  { id: 'cat-4', name: 'Paniers', slug: 'paniers', order: 4 },
+]
+
+export const mockProducts: Product[] = [
+  // Fruits
+  {
+    id: 'p-1',
+    name: 'Tomates anciennes',
+    slug: 'tomates-anciennes',
+    description:
+      'Nos tomates anciennes sont cultivées sans pesticides dans nos serres provençales. Goût intense, chair fondante — idéales en salade ou sur bruschetta.',
+    price: 4.50,
+    unit: 'le kg',
+    categoryId: 'cat-1',
+    imageUrl: 'https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=600&auto=format&fit=crop&q=80',
+    isFeatured: true,
+    isAvailable: true,
+  },
+  {
+    id: 'p-2',
+    name: 'Fraises Gariguette',
+    slug: 'fraises-gariguette',
+    description:
+      'Fraises Gariguette du Lot-et-Garonne. Récoltées à maturité, elles sont sucrées et parfumées. À consommer rapidement.',
+    price: 5.90,
+    unit: 'la barquette 500g',
+    categoryId: 'cat-1',
+    imageUrl: 'https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=600&auto=format&fit=crop&q=80',
+    isFeatured: true,
+    isAvailable: true,
+    promotionId: 'promo-1',
+  },
+  {
+    id: 'p-3',
+    name: 'Cerises Burlat',
+    slug: 'cerises-burlat',
+    description:
+      'Premières cerises de la saison. Grosses, fermes et très sucrées. Origine : Drôme.',
+    price: 7.20,
+    unit: 'le kg',
+    categoryId: 'cat-1',
+    imageUrl: 'https://images.unsplash.com/photo-1528821128474-27f963b062bf?w=600&auto=format&fit=crop&q=80',
+    isFeatured: false,
+    isAvailable: true,
+  },
+  {
+    id: 'p-4',
+    name: 'Abricots du Roussillon',
+    slug: 'abricots-roussillon',
+    description:
+      'Abricots moelleux et gorgés de soleil. Parfaits nature, en confiture ou en tarte.',
+    price: 4.80,
+    unit: 'le kg',
+    categoryId: 'cat-1',
+    imageUrl: 'https://images.unsplash.com/photo-1521997888043-aa9c02742461?w=600&auto=format&fit=crop&q=80',
+    isFeatured: true,
+    isAvailable: true,
+  },
+
+  // Légumes
+  {
+    id: 'p-5',
+    name: 'Courgettes vertes',
+    slug: 'courgettes-vertes',
+    description:
+      'Courgettes jeunes, tendres et savoureuses. Récoltées avant d\'être trop grosses pour garder leur saveur.',
+    price: 2.80,
+    unit: 'le kg',
+    categoryId: 'cat-2',
+    imageUrl: 'https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=600&auto=format&fit=crop&q=80',
+    isFeatured: false,
+    isAvailable: true,
+  },
+  {
+    id: 'p-6',
+    name: 'Haricots verts extra-fins',
+    slug: 'haricots-verts',
+    description:
+      'Haricots verts cueillis à la main, très fins et sans fil. La texture idéale pour vos plats d\'été.',
+    price: 5.50,
+    unit: 'le kg',
+    categoryId: 'cat-2',
+    imageUrl: 'https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=600&auto=format&fit=crop&q=80',
+    isFeatured: true,
+    isAvailable: true,
+  },
+  {
+    id: 'p-7',
+    name: 'Salade batavia',
+    slug: 'salade-batavia',
+    description:
+      'Batavia croquante et fraîche, cultivée en pleine terre. Belle tête bien fournie.',
+    price: 1.50,
+    unit: 'la pièce',
+    categoryId: 'cat-2',
+    imageUrl: 'https://images.unsplash.com/photo-1556801712-76c8eb07bbc9?w=600&auto=format&fit=crop&q=80',
+    isFeatured: false,
+    isAvailable: false, // rupture de stock
+  },
+  {
+    id: 'p-8',
+    name: 'Poivrons tricolores',
+    slug: 'poivrons-tricolores',
+    description:
+      'Assortiment rouge, jaune et vert. Doux et charnus, idéaux rôtis au four ou farcis.',
+    price: 3.90,
+    unit: 'le filet 3 pièces',
+    categoryId: 'cat-2',
+    imageUrl: 'https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?w=600&auto=format&fit=crop&q=80',
+    isFeatured: true,
+    isAvailable: true,
+  },
+
+  // Herbes
+  {
+    id: 'p-9',
+    name: 'Basilic frais',
+    slug: 'basilic-frais',
+    description:
+      'Plant de basilic grand vert, très parfumé. À utiliser en cuisine ou à planter chez vous.',
+    price: 1.80,
+    unit: 'le plant',
+    categoryId: 'cat-3',
+    imageUrl: 'https://images.unsplash.com/photo-1618164436241-4473940d1f5c?w=600&auto=format&fit=crop&q=80',
+    isFeatured: false,
+    isAvailable: true,
+  },
+  {
+    id: 'p-10',
+    name: 'Bouquet de persil plat',
+    slug: 'persil-plat',
+    description:
+      'Persil plat frais, feuilles larges et très aromatiques. Récolté le matin même.',
+    price: 0.90,
+    unit: 'le bouquet',
+    categoryId: 'cat-3',
+    imageUrl: 'https://images.unsplash.com/photo-1514733670139-4d87a1941d55?w=600&auto=format&fit=crop&q=80',
+    isFeatured: false,
+    isAvailable: true,
+  },
+
+  // Paniers
+  {
+    id: 'p-11',
+    name: 'Panier découverte',
+    slug: 'panier-decouverte',
+    description:
+      'Un assortiment de saison composé par notre équipe : 4 à 5 légumes et 2 fruits de qualité. Parfait pour découvrir nos produits.',
+    price: 18.00,
+    unit: 'le panier',
+    categoryId: 'cat-4',
+    imageUrl: 'https://images.unsplash.com/photo-1610348725531-843dff563e2c?w=600&auto=format&fit=crop&q=80',
+    isFeatured: true,
+    isAvailable: true,
+  },
+  {
+    id: 'p-12',
+    name: 'Panier famille',
+    slug: 'panier-famille',
+    description:
+      'Un grand panier pour 4 à 5 personnes : 6 légumes, 3 fruits, herbes fraîches. Composition selon arrivages.',
+    price: 32.00,
+    unit: 'le panier',
+    categoryId: 'cat-4',
+    imageUrl: 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80',
+    isFeatured: true,
+    isAvailable: true,
+  },
+]

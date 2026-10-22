@@ -1,0 +1,135 @@
+/* Path: src/demo/pages/DemoCatalogPage.module.css */
+
+.page {
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-family: var(--font-heading, serif);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  background-color: #ffffff;
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.searchBox {
+  position: relative;
+  width: 100%;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.searchInput:focus {
+  border-color: #2D6A4F;
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.15);
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  font-size: 1rem;
+}
+
+.categoryPills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pill {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border: none;
+  padding: 0.45rem 0.95rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pill:hover {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.activePill {
+  background-color: #2D6A4F;
+  color: #ffffff;
+}
+
+.activePill:hover {
+  background-color: #24553f;
+  color: #ffffff;
+}
+
+.countInfo {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px dashed #d1d5db;
+}
+
+.emptyIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.resetBtn {
+  margin-top: 1rem;
+  background-color: #2D6A4F;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}

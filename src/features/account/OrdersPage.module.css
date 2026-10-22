@@ -1,0 +1,120 @@
+/* Path: src/features/account/OrdersPage.module.css */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding-bottom: var(--space-16);
+}
+
+/* ─── En-tête ─── */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding-bottom: var(--space-4);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  color: var(--color-heading);
+  margin-bottom: var(--space-1);
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+}
+
+/* ─── Filtre ─── */
+.filters {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.filterLabel {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.filterSelect {
+  padding: var(--space-2) var(--space-4);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background-color: white;
+  font-size: var(--text-sm);
+  font-family: var(--font-body);
+  color: var(--color-text);
+  cursor: pointer;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.filterSelect:focus {
+  border-color: var(--color-primary-light);
+}
+
+/* ─── Liste des commandes ─── */
+.status {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  padding: var(--space-8) 0;
+}
+
+.statusError {
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+  padding: var(--space-4) var(--space-5);
+  background-color: #fef2f2;
+  border-radius: var(--radius-md);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* ─── État vide ─── */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-20) 0;
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 3rem;
+}
+
+.emptyTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  color: var(--color-heading);
+}
+
+.emptyText {
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 640px) {
+  .title {
+    font-size: var(--text-3xl);
+  }
+
+  .header {
+    flex-direction: column;
+  }
+}

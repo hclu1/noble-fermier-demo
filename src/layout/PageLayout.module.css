@@ -1,0 +1,17 @@
+/* Path: src/layout/PageLayout.module.css */
+
+/* Structure flex colonne : header en haut, footer en bas
+   Le main prend tout l'espace disponible grâce à flex: 1 */
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+}
+
+.main {
+  flex: 1;
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-16);
+}

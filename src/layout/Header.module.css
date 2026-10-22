@@ -1,0 +1,205 @@
+/* Path: src/layout/Header.module.css */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-height);
+  background-color: var(--color-primary-dark);
+  border-bottom: 3px solid var(--color-primary-light);
+  box-shadow: var(--shadow-md);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  gap: var(--space-6);
+}
+
+/* ─── Marque ─── */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  border-radius: var(--radius-sm);
+}
+
+.logoPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-primary-light);
+  color: white;
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  border-radius: var(--radius-md);
+}
+
+.brandName {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-on-dark);
+  letter-spacing: 0.02em;
+}
+
+/* ─── Navigation desktop ─── */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.navLink {
+  padding: var(--space-2) var(--space-4);
+  color: rgba(254, 250, 224, 0.80);
+  font-weight: var(--font-medium);
+  font-size: var(--text-sm);
+  border-radius: var(--radius-full);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.navLink:hover {
+  background-color: rgba(255, 255, 255, 0.10);
+  color: var(--color-text-on-dark);
+}
+
+.navLink.active {
+  background-color: var(--color-primary-light);
+  color: white;
+}
+
+/* ─── Bouton menu mobile ─── */
+.menuButton {
+  display: none;
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  color: var(--color-text-on-dark);
+  transition: background-color var(--transition-fast);
+}
+
+.menuButton:hover {
+  background-color: rgba(255, 255, 255, 0.10);
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 2px;
+  position: relative;
+  transition: transform var(--transition-normal);
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before { top: -6px; }
+.hamburger::after  { top:  6px; }
+
+/* ─── Menu mobile ─── */
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4) 0 var(--space-6);
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  gap: var(--space-1);
+}
+
+.mobileLink {
+  padding: var(--space-3) var(--space-4);
+  color: rgba(254, 250, 224, 0.80);
+  font-weight: var(--font-medium);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.mobileLink:hover,
+.mobileLink.active {
+  background-color: var(--color-primary-light);
+  color: white;
+}
+
+/* ─── Actions utilisateur (Panier) ─── */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-shrink: 0;
+}
+
+.cartLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-text-on-dark);
+  background-color: rgba(255, 255, 255, 0.10);
+  border-radius: var(--radius-full);
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  text-decoration: none;
+}
+
+.cartLink:hover {
+  background-color: var(--color-primary-light);
+  transform: translateY(-2px);
+}
+
+.cartIcon {
+  font-size: 1.25rem;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: var(--color-accent);
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-primary-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .menuButton {
+    display: flex;
+  }
+
+  .actions {
+    gap: var(--space-2);
+  }
+}

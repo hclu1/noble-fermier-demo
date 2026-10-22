@@ -1,0 +1,128 @@
+/* Path: src/features/auth/LoginPage.module.css */
+
+.page {
+  display: flex;
+  justify-content: center;
+  padding-bottom: var(--space-16);
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* ─── En-tête ─── */
+.header {
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  color: var(--color-heading);
+  margin-bottom: var(--space-2);
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+}
+
+/* ─── Formulaire ─── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+}
+
+.forgotLink {
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  transition: color var(--transition-fast);
+}
+
+.forgotLink:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+.input {
+  padding: var(--space-3) var(--space-4);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: white;
+  font-size: var(--text-base);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  width: 100%;
+}
+
+.input:focus {
+  border-color: var(--color-primary-light);
+  box-shadow: 0 0 0 3px rgba(82, 183, 136, 0.15);
+}
+
+.input:disabled {
+  background-color: var(--color-surface-alt);
+  cursor: not-allowed;
+}
+
+/* ─── Erreur ─── */
+.error {
+  padding: var(--space-3) var(--space-4);
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-md);
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+}
+
+/* ─── Démo ─── */
+.demo {
+  background-color: var(--color-surface-alt);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.demoLabel {
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-1);
+  text-transform: uppercase;
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+}
+
+.demo strong {
+  color: var(--color-text);
+  font-weight: var(--font-semibold);
+}

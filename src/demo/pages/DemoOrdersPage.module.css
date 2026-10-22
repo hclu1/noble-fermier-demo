@@ -1,0 +1,146 @@
+/* Path: src/demo/pages/DemoOrdersPage.module.css */
+
+.page {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-family: var(--font-heading, serif);
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.noticeBox {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: #166534;
+}
+
+.orderList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.orderCard {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.cardHeader {
+  background-color: #f9fafb;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.orderId {
+  font-weight: 700;
+  color: #1f2937;
+  font-size: 1rem;
+}
+
+.orderDate {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.statusBadge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.statusReady {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.statusConfirmed {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.statusDelivered {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.itemsList {
+  padding: 1.25rem;
+}
+
+.itemRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 0.9rem;
+}
+
+.itemRow:last-child {
+  border-bottom: none;
+}
+
+.cardFooter {
+  background-color: #f9fafb;
+  padding: 1rem 1.25rem;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.totalText {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #2D6A4F;
+}
+
+.actionBtn {
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.825rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.actionBtn:hover {
+  background-color: #f3f4f6;
+}
