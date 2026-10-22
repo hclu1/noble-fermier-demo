@@ -17,8 +17,7 @@ export default function DemoHeader() {
       <div className={styles.inner}>
         <Link to="/" className={styles.brand}>
           <span className={styles.logoIcon}>🧺</span>
-          <span className={styles.brandName}>Noble Fermier</span>
-          <span className={styles.demoTag}>Démo</span>
+          <span className={styles.brandName}>Noble Fermier — Mode Démo</span>
         </Link>
 
         <nav className={styles.nav} aria-label="Navigation démo">

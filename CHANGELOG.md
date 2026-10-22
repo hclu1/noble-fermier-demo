@@ -3,6 +3,11 @@
 Toutes les modifications notables apportées à ce projet sont documentées dans ce fichier.
 Le format est basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/) et ce projet respecte le [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.1.2] - 2026-10-22
+
+### Modifié
+- Ajout explicite de « Mode Démo » dans le titre de marque principal, l'en-tête de navigation, le titre de la page d'accueil et le pied de page (« Noble Fermier — Mode Démo »).
+
 ## [1.1.1] - 2026-10-22
 
 ### Modifié

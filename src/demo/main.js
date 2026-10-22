@@ -11,4 +11,5 @@ import '../styles/global.css';
 // Si déployé sur un domaine ou sous-domaine dédié (ex. demo-noble-fermier.vercel.app), utilise la racine /
 const isSubpathDemo = window.location.pathname.startsWith('/demo');
 const basename = isSubpathDemo ? '/demo' : '/';
+document.title = 'Noble Fermier — Mode Démo';
 createRoot(document.getElementById('root')).render(_jsx(StrictMode, { children: _jsx(BrowserRouter, { basename: basename, children: _jsx(DemoApp, {}) }) }));

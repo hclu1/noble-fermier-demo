@@ -10,7 +10,7 @@ export default function DemoFooter() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <div>
-          <h4 className={styles.title}>Noble Fermier — Démo</h4>
+          <h4 className={styles.title}>Noble Fermier — Mode Démo</h4>
           <p className={styles.text}>
             Exemple d’application e-commerce & vitrine personnalisée pour primeurs,
             maraîchers et artisans des circuits courts.

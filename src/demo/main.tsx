@@ -13,6 +13,8 @@ import '../styles/global.css'
 const isSubpathDemo = window.location.pathname.startsWith('/demo')
 const basename = isSubpathDemo ? '/demo' : '/'
 
+document.title = 'Noble Fermier — Mode Démo'
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter basename={basename}>

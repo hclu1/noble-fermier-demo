@@ -35,11 +35,11 @@ export default function DemoHomePage() {
       {/* ─── Hero Section ─── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.heroTag}>🌱 Fraîcheur & Terroir en Direct</span>
-          <h1 className={styles.heroTitle}>Le Meilleur des Primeurs et Maraîchers</h1>
+          <span className={styles.heroTag}>🌱 Fraîcheur & Terroir en Direct · Démo Appalacarte</span>
+          <h1 className={styles.heroTitle}>Noble Fermier — Mode Démo</h1>
           <p className={styles.heroSubtitle}>
             Fruits cueillis à maturité, légumes de pleine terre et paniers composés.
-            Commandez en ligne et retirez vos cagettes préparées avec passion.
+            Présentation interactive de l'application primeur pour votre vitrine.
           </p>
           <div className={styles.heroActions}>
             <Link to="/catalogue" className={styles.primaryBtn}>
